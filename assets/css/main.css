@@ -1,3 +1,138 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* ===================== VARIABLES ===================== */
 /* ===================== PLACEHOLDERS ===================== */
 .col, .row[class*=row-cols-] > *,
@@ -647,7 +782,7 @@
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1170px;
   }
   .row-cols-xl-1 > * {
     width: 100%;
@@ -931,145 +1066,19 @@
     --grid-gutter-y: 90px;
   }
 }
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6rem;
 }
 
 a {
@@ -1089,6 +1098,309 @@ button {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.header .header-navbar, .header .header-navbar .navbar__list, .header .header-navbar .navbar__link, .header .header-navbar .header__actions, .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-count, .header-hero .hero-container .hero__media__collum-right .hero__platforms, .header-hero .hero-container .hero__media__collum-right .hero__badge, .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author, .header-hero .hero__content .hero__action, .header-hero .hero__content .hero__action--secondary, .header-hero .hero__content .hero__action--icon, .directories__btn, .directories__btn--icon {
+  display: flex;
+  align-items: center;
+}
+
+.header .header-navbar .navbar__text, .directories__desc {
+  color: #665f73;
+  /* P2 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 175%;
+}
+
+.header .header-navbar .header__actions .header__login, .btn {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn {
+  min-width: 157px;
+  height: 64px;
+  border-radius: 8px;
+  background: #201830;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.header {
+  background: #fff8f3;
+}
+.header .header-navbar {
+  padding: 42px 0 20px;
+}
+.header .header-navbar .navbar__list {
+  margin-left: 265px;
+  gap: 48px;
+}
+.header .header-navbar .navbar__icon {
+  margin-left: 7px;
+  margin-top: -4px;
+}
+.header .header-navbar .header__actions {
+  margin-left: auto;
+  gap: 28px;
+}
+.header .header-navbar .header__actions .header__login {
+  color: #201830;
+}
+.header .header-navbar .header__actions .header__signup {
+  min-width: 116px;
+  height: 48px;
+}
+
+.header-hero {
+  padding: 90px 0 140px;
+  background: #fff8f3;
+}
+.header-hero .hero-container .hero__image {
+  width: 100%;
+  height: 302px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__card--listener {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__card--listener .hero__image--play {
+  padding: 17px 21px;
+  position: absolute;
+  top: 272px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 12px 44px 0 rgba(32, 24, 48, 0.07);
+}
+.header-hero .hero-container .hero__media__collum-left .hero__stats {
+  margin-top: 53px;
+  display: inline-block;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__stats--text {
+  color: #201830;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__stats--avatars {
+  display: flex;
+  margin-top: 10px;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__stats--avatar {
+  margin-left: -18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__stats--avatar:first-child {
+  margin-left: 0;
+}
+.header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-count {
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #201830;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.header-hero .hero-container .hero__media__collum-right {
+  margin-top: 102px;
+  position: relative;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__platforms {
+  gap: 18px;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__platforms .hero__platform--img {
+  width: 28px;
+  height: 28px;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__decor--top {
+  position: absolute;
+  top: -43px;
+  left: 54px;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__decor--bottom {
+  position: absolute;
+  top: 10px;
+  left: 157px;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__badge {
+  position: absolute;
+  top: -94px;
+  left: 148px;
+  justify-content: center;
+  flex-direction: column;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background-color: #ff9051;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__badge--count {
+  color: #fff;
+  text-align: center;
+  font-weight: 800;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__badge--text {
+  margin-top: 4px;
+  color: #ffefe7;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__card--host {
+  margin-top: 28px;
+  position: relative;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author {
+  position: absolute;
+  top: 226px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  flex-direction: column;
+  width: 194px;
+  height: 60px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 44px 0 rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(5px);
+}
+.header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author--name {
+  color: #201830;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author--role {
+  margin-top: 6px;
+  color: #665f73;
+  font-size: 1.2rem;
+}
+.header-hero .hero__content {
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+.header-hero .hero__content .hero__title {
+  color: #201830;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 114.286%;
+}
+.header-hero .hero__content .hero__decor {
+  position: absolute;
+  top: 135px;
+  left: 33px;
+  z-index: -1;
+}
+.header-hero .hero__content .hero__description {
+  margin-top: 20px;
+  color: #665f73;
+  font-size: 1.8rem;
+  line-height: 166.667%;
+}
+.header-hero .hero__content .hero__action {
+  margin-top: 40px;
+}
+.header-hero .hero__content .hero__action--btn {
+  background: #936cdd;
+}
+.header-hero .hero__content .hero__action--secondary {
+  margin-left: 28px;
+}
+.header-hero .hero__content .hero__action--link {
+  color: #201830;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3rem; /* 166.667% */
+}
+.header-hero .hero__content .hero__action--icon {
+  justify-content: center;
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #201830;
+}
+
+.directories {
+  padding: 160px 0 206px;
+}
+.directories__content {
+  margin-top: 45px;
+}
+.directories__title {
+  color: #201830;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 123.81%;
+}
+.directories__desc {
+  margin-top: 18px;
+}
+.directories__btn {
+  margin-top: 38px;
+  background: #936cdd;
+  justify-content: center;
+}
+.directories__btn--icon {
+  margin-top: 8px;
+  justify-content: center;
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  color: #936cdd;
+}
+.directories__icon {
+  position: relative;
+}
+.directories__icon--apple {
+  position: absolute;
+  left: 285px;
+  width: 148px;
+  height: 148px;
+}
+.directories__icon--soundcloud {
+  position: absolute;
+  right: 0;
+  top: 59px;
+  width: 100px;
+  height: 100px;
+}
+.directories__icon--castbox {
+  position: absolute;
+  top: 164px;
+  width: 80px;
+  height: 80px;
+}
+.directories__icon--spotify {
+  position: absolute;
+  top: 273px;
+  left: 169px;
+  width: 126px;
+  height: 126px;
+}
+.directories__icon--google {
+  position: absolute;
+  top: 221px;
+  right: 48px;
+  width: 138px;
+  height: 138px;
 }
 
 /*# sourceMappingURL=main.css.map */

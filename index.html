@@ -4,6 +4,320 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="./assets/css/main.css" class="css" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     </head>
-    <body></body>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-navbar">
+                    <div class="logo-navbar">
+                        <img src="./assets/img/Logo.svg" alt="" />
+                    </div>
+                    <div class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    <span class="navbar__text"> Episodes </span>
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    <span class="navbar__text"> Trending </span>
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    <span class="navbar__text"> Category </span>
+                                    <span class="navbar__icon">
+                                        <img
+                                            src="./assets/icons/icon-down.svg"
+                                        />
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    <span class="navbar__text"> Blog </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__actions">
+                        <a href="#!" class="header__login">Log in</a>
+                        <button class="header__signup btn">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header-hero">
+            <div class="container">
+                <section class="hero-container">
+                    <!-- LEFT -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="hero__media__collum-left">
+                                        <div class="hero__card--listener">
+                                            <img
+                                                src="./assets/img/hero-1.png"
+                                                alt="Podcast listener"
+                                                class="hero__image"
+                                            />
+                                            <div class="hero__player">
+                                                <img
+                                                    src="./assets/img/hero-play.svg"
+                                                    alt="Podcast listener"
+                                                    class="hero__image--play"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="hero__stats">
+                                            <span class="hero__stats--text">
+                                                Podcast listener
+                                            </span>
+                                            <div class="hero__stats--avatars">
+                                                <img
+                                                    src="./assets/img/face-1.jpg"
+                                                    class="hero__stats--avatar"
+                                                />
+                                                <img
+                                                    src="./assets/img/face-2.jpg"
+                                                    class="hero__stats--avatar"
+                                                />
+                                                <img
+                                                    src="./assets/img/face-3.jpg"
+                                                    class="hero__stats--avatar"
+                                                />
+                                                <span
+                                                    class="hero__stats--avatar"
+                                                >
+                                                    <span
+                                                        class="hero__stats--avatar-count"
+                                                    >
+                                                        +50K
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="hero__media__collum-right">
+                                        <div class="hero__platforms">
+                                            <div class="hero__platform">
+                                                <img
+                                                    src="./assets/img/spotify.png"
+                                                    alt="Spotify"
+                                                    class="hero__platform--img"
+                                                />
+                                            </div>
+                                            <div class="hero__platform">
+                                                <img
+                                                    src="./assets/img/google-podcasts.png"
+                                                    alt="Google Podcast"
+                                                    class="hero__platform--img"
+                                                />
+                                            </div>
+                                            <div class="hero__platform">
+                                                <img
+                                                    src="./assets/img/apple-podcasts.png"
+                                                    alt="Apple Podcast"
+                                                    class="hero__platform--img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="hero__badge">
+                                            <span class="hero__badge--count"
+                                                >500+</span
+                                            >
+                                            <span class="hero__badge--text"
+                                                >Podcasts</span
+                                            >
+                                        </div>
+                                        <div class="hero__decor">
+                                            <img
+                                                src="./assets/img/hero-decor.svg"
+                                                class="hero__decor--top"
+                                            />
+                                            <img
+                                                src="./assets/img/hero-decor.svg"
+                                                class="hero__decor--bottom"
+                                            />
+                                        </div>
+                                        <div class="hero__card--host">
+                                            <img
+                                                src="./assets/img/hero-2.png"
+                                                alt="Podcast host"
+                                                class="hero__image"
+                                            />
+                                            <div class="hero__author">
+                                                <span
+                                                    class="hero__author--name"
+                                                >
+                                                    Sarah Taylor
+                                                </span>
+                                                <span
+                                                    class="hero__author--role"
+                                                >
+                                                    Song podcaster
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="offset-lg-1 col-lg-5">
+                            <div class="hero__content">
+                                <h1 class="hero__title">
+                                    A new era of
+                                    <span class="hero__title-highlight"
+                                        >podcasting </span
+                                    ><br />
+                                    for you
+                                </h1>
+                                <div class="hero__decor">
+                                    <img src="./assets/img/decor-text.svg" />
+                                </div>
+
+                                <p class="hero__description">
+                                    Rebuilt for simplicity and speed, so you can
+                                    spend more time discovering and listening to
+                                    great podcasts.
+                                </p>
+
+                                <div class="hero__action">
+                                    <button
+                                        href="#!"
+                                        class="hero__action--btn btn"
+                                    >
+                                        Get Started
+                                    </button>
+                                    <a
+                                        href="#!"
+                                        class="hero__action--secondary"
+                                    >
+                                        <span class="hero__action--link">
+                                            Listen now
+                                        </span>
+                                        <span class="hero__action--icon">
+                                            <img
+                                                src="./assets/icons/play.svg"
+                                            />
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="directories">
+            <div class="container">
+                <section class="directories">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="directories__content">
+                                <h2 class="directories__title">
+                                    We are in the top <br />
+                                    directories
+                                </h2>
+
+                                <p class="directories__desc">
+                                    Rebuilt for simplicity and speed, so you can
+                                    spend more time discovering and listening to
+                                    great podcasts. We are everywhere on the
+                                    internet.
+                                </p>
+
+                                <button href="#!" class="directories__btn btn">
+                                    <span>Listen now</span>
+                                    <span class="directories__btn--icon">
+                                        <svg
+                                            width="6"
+                                            height="7"
+                                            viewBox="0 0 6 7"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M5.85 3.30439C5.91667 3.34288 5.91667 3.4391 5.85 3.47759L0.15 6.76849C0.083333 6.80698 0 6.75887 0 6.68189L0 0.100095C0 0.0231146 0.0833335 -0.0249978 0.15 0.0134922L5.85 3.30439Z"
+                                                fill="currentcolor"
+                                            />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="offset-lg-1 col-lg-6">
+                            <div class="directories__icon">
+                                <img
+                                    src="./assets/img/apple-podcasts.png"
+                                    alt="Apple Podcast"
+                                    class="directories__icon--apple"
+                                />
+
+                                <img
+                                    src="./assets/img/SoundCloud.png"
+                                    alt="SoundCloud"
+                                    class="directories__icon--soundcloud"
+                                />
+
+                                <img
+                                    src="./assets/img/pocket-casts.png"
+                                    alt="Castbox"
+                                    class="directories__icon--castbox"
+                                />
+
+                                <img
+                                    src="./assets/img/spotify.png"
+                                    alt="Spotify"
+                                    class="directories__icon--spotify"
+                                />
+
+                                <img
+                                    src="./assets/img/google-podcasts.png"
+                                    alt="Google Podcast"
+                                    class="directories__icon--google"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
 </html>

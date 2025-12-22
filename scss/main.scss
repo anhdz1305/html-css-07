@@ -247,12 +247,20 @@
     padding: 160px 0 206px;
     &__content {
         margin-top: 45px;
+        position: relative;
+        z-index: 1;
     }
     &__title {
         color: #201830;
         font-size: 4.2rem;
         font-weight: 700;
         line-height: 123.81%;
+    }
+    &__decor {
+        position: absolute;
+        left: 173px;
+        top: 80px;
+        z-index: -1;
     }
     &__desc {
         margin-top: 18px;
@@ -309,6 +317,18 @@
             right: 48px;
             width: 138px;
             height: 138px;
+        }
+        &--decor {
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 287px;
+            height: 287px;
+            border-radius: 287px;
+            opacity: 0.4;
+            background: #ff9051;
+            filter: blur(129px);
         }
     }
 }

@@ -1341,12 +1341,20 @@ button {
 }
 .directories__content {
   margin-top: 45px;
+  position: relative;
+  z-index: 1;
 }
 .directories__title {
   color: #201830;
   font-size: 4.2rem;
   font-weight: 700;
   line-height: 123.81%;
+}
+.directories__decor {
+  position: absolute;
+  left: 173px;
+  top: 80px;
+  z-index: -1;
 }
 .directories__desc {
   margin-top: 18px;
@@ -1401,6 +1409,18 @@ button {
   right: 48px;
   width: 138px;
   height: 138px;
+}
+.directories__icon--decor {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 287px;
+  height: 287px;
+  border-radius: 287px;
+  opacity: 0.4;
+  background: #ff9051;
+  filter: blur(129px);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -793,16 +793,31 @@
     &__section {
         display: flex;
         justify-content: space-between;
+        @include abstracts.breakpoint(md) {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 38px;
+        }
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 38px;
+        }
     }
 
     &__copyright {
         margin-top: 14px;
         @extend %text-desc;
+        width: 270px;
+        @include abstracts.breakpoint(xl) {
+            max-width: 90%;
+        }
     }
     &__social {
         @extend %dis-aline-flex;
         margin-top: 18px;
         gap: 14px;
+
         &--link {
             @extend %dis-aline-flex;
             justify-content: center;
@@ -820,6 +835,15 @@
         display: flex;
         justify-content: space-between;
         gap: 90px;
+        @include abstracts.breakpoint(xl) {
+            gap: 50px;
+        }
+        @include abstracts.breakpoint(md) {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 38px;
+        }
+
         &--title {
             @extend %text-h3;
         }

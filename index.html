@@ -102,7 +102,7 @@
                                                     alt="Podcast listener"
                                                     class="hero__image"
                                                 />
-                                                <div class="hero__player">
+                                                <div class="hero__play">
                                                     <img
                                                         src="./assets/img/hero-play.svg"
                                                         alt="Podcast listener"
@@ -131,13 +131,9 @@
                                                         class="hero__stats--avatar"
                                                     />
                                                     <span
-                                                        class="hero__stats--avatar"
+                                                        class="hero__stats--avatar-text"
                                                     >
-                                                        <span
-                                                            class="hero__stats--avatar-count"
-                                                        >
-                                                            +50K
-                                                        </span>
+                                                        +50K
                                                     </span>
                                                 </div>
                                             </div>
@@ -178,14 +174,14 @@
                                                     >Podcasts</span
                                                 >
                                             </div>
-                                            <div class="hero__decor">
+                                            <div class="hero__decor-left">
                                                 <img
                                                     src="./assets/img/hero-decor.svg"
-                                                    class="hero__decor--top"
+                                                    class="hero__decor-left--top"
                                                 />
                                                 <img
                                                     src="./assets/img/hero-decor.svg"
-                                                    class="hero__decor--bottom"
+                                                    class="hero__decor-left--bottom"
                                                 />
                                             </div>
                                             <div class="hero__card--host">
@@ -223,6 +219,7 @@
                                     <div class="hero__decor">
                                         <img
                                             src="./assets/img/decor-text.svg"
+                                            class="hero__decor--img"
                                         />
                                     </div>
 
@@ -263,11 +260,10 @@
                 <div class="container">
                     <section class="directories-section">
                         <div class="row">
-                            <div class="col-xl-5 col-lg-5 col-sm-12">
+                            <div class="col-xl-5 col-lg-5 col-sm-12 col-12">
                                 <div class="directories__content">
                                     <h2 class="directories__title">
-                                        We are in the top <br />
-                                        padcast directories
+                                        We are in the top padcast directories
                                     </h2>
 
                                     <p class="directories__desc">
@@ -279,6 +275,7 @@
                                     <div class="directories__decor">
                                         <img
                                             src="./assets/img/directories-decor.png"
+                                            class="directories__decor--img"
                                         />
                                     </div>
                                     <button
@@ -356,10 +353,12 @@
                                 exploring categories.<br />
                                 Make your day even better
                             </p>
-                            <img
-                                src="./assets/img/category-decor.svg"
-                                class="category-section__decor"
-                            />
+                            <div class="category-section__decor">
+                                <img
+                                    src="./assets/img/category-decor.svg"
+                                    class="category-section__decor--img"
+                                />
+                            </div>
                         </header>
 
                         <div class="category-grid">
@@ -546,7 +545,9 @@
                                 />
                             </div>
 
-                            <button class="btn btn--dark">All episodes</button>
+                            <button class="btn episodes-section__btn">
+                                All episodes
+                            </button>
                         </header>
 
                         <div class="episodes-grid">
@@ -744,6 +745,9 @@
                             <span class="dot"></span>
                             <span class="dot"></span>
                         </div>
+                        <button class="btn episodes-grid__btn">
+                            All episodes
+                        </button>
                     </section>
                 </div>
             </div>

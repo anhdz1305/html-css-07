@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1100,7 +1101,7 @@ button {
   cursor: pointer;
 }
 
-.pagination, .header .header-navbar, .header .header-navbar .navbar__list, .header .header-navbar .navbar__link, .header .header-navbar .header__actions, .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-count, .header-hero .hero-container .hero__media__collum-right .hero__platforms, .header-hero .hero-container .hero__media__collum-right .hero__badge, .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author, .header-hero .hero__content .hero__action, .header-hero .hero__content .hero__action--secondary, .header-hero .hero__content .hero__action--icon, .directories__btn, .directories__btn--icon, .episodes .episodes-section__header, .episodes .episode-card, .episodes .episode-card__link, .episodes .episode-card__link--icon, .subscribe__header, .subscribe__form, .footer__social, .footer__social--link, .footer__platform--list {
+.pagination, .header .header-navbar, .header .header-navbar .navbar__list, .header .header-navbar .navbar__link, .header .header-navbar .header__actions, .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-text, .header-hero .hero-container .hero__media__collum-right .hero__platforms, .header-hero .hero-container .hero__media__collum-right .hero__badge, .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author, .header-hero .hero__content .hero__action, .header-hero .hero__content .hero__action--secondary, .header-hero .hero__content .hero__action--icon, .directories__btn, .directories__btn--icon, .episodes .episodes-section__header, .episodes .episode-card, .episodes .episode-card__link, .episodes .episode-card__link--icon, .subscribe__header, .subscribe__form, .footer__social, .footer__social--link, .footer__platform--list {
   display: flex;
   align-items: center;
 }
@@ -1227,8 +1228,8 @@ button {
 }
 @media (max-width: 575.98px) {
   .header-hero .hero-container .hero__image {
-    height: 179.173px;
     width: 100%;
+    height: 173px;
   }
 }
 .header-hero .hero-container .hero__media__collum-left .hero__card--listener {
@@ -1236,20 +1237,27 @@ button {
   display: block;
   position: relative;
 }
-.header-hero .hero-container .hero__media__collum-left .hero__card--listener .hero__image--play {
-  padding: 17px 21px;
+.header-hero .hero-container .hero__media__collum-left .hero__card--listener .hero__play {
   position: absolute;
   top: 272px;
   left: 50%;
   transform: translateX(-50%);
+  padding: 17px 21px;
   border-radius: 9px;
   background: #fff;
   box-shadow: 0 12px 44px 0 rgba(32, 24, 48, 0.07);
 }
 @media (max-width: 575.98px) {
-  .header-hero .hero-container .hero__media__collum-left .hero__card--listener {
+  .header-hero .hero-container .hero__media__collum-left .hero__card--listener .hero__play {
+    top: 160px;
     padding: 10px 12px;
     border-radius: 5px;
+  }
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-left .hero__card--listener .hero__image--play {
+    width: 90px;
+    height: 15px;
   }
 }
 .header-hero .hero-container .hero__media__collum-left .hero__stats {
@@ -1269,14 +1277,23 @@ button {
   margin-left: -18px;
   width: 48px;
   height: 48px;
-  border-radius: 48px;
+  border-radius: 50%;
   border: 2px solid #fff;
   object-fit: cover;
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar {
+    width: 28px;
+    height: 28px;
+    margin-left: -8px;
+    border: 1px solid #fff;
+  }
 }
 .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar:first-child {
   margin-left: 0;
 }
-.header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-count {
+.header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-text {
+  margin-left: -18px;
   justify-content: center;
   width: 48px;
   height: 48px;
@@ -1285,6 +1302,15 @@ button {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-text {
+    margin-left: -8px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+    border: 1px solid #fff;
+  }
 }
 .header-hero .hero-container .hero__media__collum-right {
   margin-top: 102px;
@@ -1297,15 +1323,33 @@ button {
   width: 28px;
   height: 28px;
 }
-.header-hero .hero-container .hero__media__collum-right .hero__decor--top {
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__platforms .hero__platform--img {
+    width: 16.612px;
+    height: 16.612px;
+  }
+}
+.header-hero .hero-container .hero__media__collum-right .hero__decor-left--top {
   position: absolute;
   top: -43px;
   left: 54px;
 }
-.header-hero .hero-container .hero__media__collum-right .hero__decor--bottom {
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__decor-left--top {
+    top: -42px;
+    left: 32px;
+  }
+}
+.header-hero .hero-container .hero__media__collum-right .hero__decor-left--bottom {
   position: absolute;
   top: 10px;
   left: 157px;
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__decor-left--bottom {
+    top: 8px;
+    left: 93px;
+  }
 }
 .header-hero .hero-container .hero__media__collum-right .hero__badge {
   position: absolute;
@@ -1318,10 +1362,23 @@ button {
   border-radius: 50%;
   background-color: #ff9051;
 }
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__badge {
+    width: 48px;
+    height: 48px;
+    top: -60px;
+    left: 97px;
+  }
+}
 .header-hero .hero-container .hero__media__collum-right .hero__badge--count {
   color: #fff;
   text-align: center;
   font-weight: 800;
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__badge--count {
+    font-size: 0.8rem;
+  }
 }
 .header-hero .hero-container .hero__media__collum-right .hero__badge--text {
   margin-top: 4px;
@@ -1329,6 +1386,11 @@ button {
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__badge--text {
+    font-size: 0.6rem;
+  }
 }
 .header-hero .hero-container .hero__media__collum-right .hero__card--host {
   margin-top: 28px;
@@ -1348,15 +1410,33 @@ button {
   box-shadow: 0 12px 44px 0 rgba(0, 0, 0, 0.07);
   backdrop-filter: blur(5px);
 }
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author {
+    top: 150px;
+    width: 115px;
+    height: 35px;
+    border-radius: 5px;
+  }
+}
 .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author--name {
   color: #201830;
   font-size: 1.4rem;
   font-weight: 600;
 }
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author--name {
+    font-size: 0.8306rem;
+  }
+}
 .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author--role {
   margin-top: 6px;
   color: #665f73;
   font-size: 1.2rem;
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author--role {
+    font-size: 0.7rem;
+  }
 }
 @media (max-width: 991.98px) {
   .header-hero .hero__content {
@@ -1374,6 +1454,11 @@ button {
   font-weight: 700;
   line-height: 114.286%;
 }
+@media (max-width: 575.98px) {
+  .header-hero .hero__content .hero__title {
+    font-size: 3.6rem;
+  }
+}
 .header-hero .hero__content .hero__decor {
   position: absolute;
   top: 135px;
@@ -1388,6 +1473,18 @@ button {
 @media (max-width: 991.98px) {
   .header-hero .hero__content .hero__decor {
     top: 135px;
+  }
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero__content .hero__decor {
+    left: 0;
+    top: 70px;
+  }
+}
+@media (max-width: 575.98px) {
+  .header-hero .hero__content .hero__decor--img {
+    width: 167px;
+    height: 16px;
   }
 }
 .header-hero .hero__content .hero__desc {
@@ -1443,16 +1540,25 @@ button {
     margin-top: 438px;
   }
 }
+.directories__title {
+  max-width: 470px;
+}
+@media (max-width: 575.98px) {
+  .directories__title {
+    width: 100%;
+    font-size: 2.6rem;
+  }
+}
 .directories__decor {
   position: absolute;
   left: 173px;
   top: 80px;
   z-index: -1;
 }
-@media (max-width: 1199.98px) {
-  .directories__decor {
-    left: -7px;
-    top: 132px;
+@media (max-width: 575.98px) {
+  .directories__decor--img {
+    width: 127px;
+    height: 16px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1463,8 +1569,20 @@ button {
     top: 68px;
   }
 }
+@media (max-width: 575.98px) {
+  .directories__decor {
+    left: 7px;
+    top: 52px;
+  }
+}
 .directories__desc {
   margin-top: 18px;
+}
+@media (max-width: 575.98px) {
+  .directories__desc {
+    width: 100%;
+    font-size: 1.4rem;
+  }
 }
 .directories__btn {
   margin-top: 38px;
@@ -1499,6 +1617,13 @@ button {
     left: 224px;
   }
 }
+@media (max-width: 575.98px) {
+  .directories__icon--apple {
+    width: 89px;
+    height: 89px;
+    left: 128px;
+  }
+}
 .directories__icon--soundcloud {
   position: absolute;
   right: 0;
@@ -1506,11 +1631,24 @@ button {
   width: 100px;
   height: 100px;
 }
+@media (max-width: 575.98px) {
+  .directories__icon--soundcloud {
+    width: 58px;
+    height: 58px;
+    top: 35px;
+  }
+}
 .directories__icon--castbox {
   position: absolute;
   top: 164px;
   width: 80px;
   height: 80px;
+}
+@media (max-width: 575.98px) {
+  .directories__icon--castbox {
+    width: 48px;
+    height: 48px;
+  }
 }
 .directories__icon--spotify {
   position: absolute;
@@ -1518,6 +1656,13 @@ button {
   left: 169px;
   width: 126px;
   height: 126px;
+}
+@media (max-width: 575.98px) {
+  .directories__icon--spotify {
+    width: 75px;
+    height: 75px;
+    left: 119px;
+  }
 }
 .directories__icon--google {
   position: absolute;
@@ -1536,6 +1681,13 @@ button {
     right: 54px;
   }
 }
+@media (max-width: 575.98px) {
+  .directories__icon--google {
+    width: 82px;
+    height: 82px;
+    right: 35px;
+  }
+}
 .directories__icon--decor {
   position: absolute;
   top: 55px;
@@ -1548,7 +1700,6 @@ button {
   background: #ff9051;
   filter: blur(129px);
 }
-
 .category {
   padding: 0 0 160px;
 }
@@ -1557,6 +1708,11 @@ button {
 }
 .category .category-section__title {
   text-align: center;
+}
+@media (max-width: 575.98px) {
+  .category .category-section__title {
+    font-size: 2.6rem;
+  }
 }
 .category .category-section__desc {
   margin-top: 18px;
@@ -1567,6 +1723,18 @@ button {
   top: 33px;
   left: 49.5%;
   z-index: -1;
+}
+@media (max-width: 575.98px) {
+  .category .category-section__decor {
+    top: 20px;
+    left: 52%;
+  }
+}
+@media (max-width: 575.98px) {
+  .category .category-section__decor--img {
+    width: 107px;
+    height: 16px;
+  }
 }
 .category .category-grid {
   margin-top: 70px;
@@ -1592,6 +1760,7 @@ button {
 .category .category-grid .category-card__content {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 86px;
   border-radius: 0 0 8px 8px;
@@ -1626,8 +1795,24 @@ button {
 .episodes .episodes-section__header {
   justify-content: space-between;
 }
+@media (max-width: 575.98px) {
+  .episodes .episodes-section__header {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+}
+.episodes .episodes-section__btn {
+  display: none;
+}
 .episodes .episodes-section__left {
   position: relative;
+  z-index: 1;
+}
+@media (max-width: 575.98px) {
+  .episodes .episodes-section__title {
+    font-size: 2.6rem;
+  }
 }
 .episodes .episodes-section__decor {
   position: absolute;
@@ -1635,9 +1820,22 @@ button {
   left: 205px;
   z-index: -1;
 }
+@media (max-width: 575.98px) {
+  .episodes .episodes-section__decor {
+    width: 103px;
+    height: 16px;
+    top: 46px;
+    left: 8px;
+  }
+}
 .episodes .episodes-section__pagination {
   margin-top: 57px;
   justify-content: center;
+}
+@media (max-width: 575.98px) {
+  .episodes .episodes-section__pagination {
+    margin-top: 0;
+  }
 }
 @media (max-width: 767.98px) {
   .episodes .episodes-grid .row > div:nth-child(2) {
@@ -1648,11 +1846,15 @@ button {
   }
 }
 @media (max-width: 575.98px) {
-  .episodes .episodes-grid .row > div:nth-child(2) {
-    order: 3;
-  }
-  .episodes .episodes-grid .row > div:nth-child(3) {
-    order: 4;
+  .episodes .episodes-grid .row {
+    display: flex;
+    flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+    gap: 15px; /* Khoảng cách giữa các thẻ */
+    padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+    -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+    overflow: hidden;
   }
 }
 @media (max-width: 991.98px) {
@@ -1663,10 +1865,31 @@ button {
     order: 4;
   }
 }
+@media (max-width: 1199.98px) {
+  .episodes .episodes-grid__btn {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .episodes .episodes-grid__btn {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .episodes .episodes-grid__btn {
+    display: block;
+    margin-top: 38px;
+  }
+}
 .episodes .episode-card {
   margin-top: 84px;
   width: 100%;
   height: 286px;
+}
+@media (max-width: 575.98px) {
+  .episodes .episode-card {
+    margin-top: 0;
+  }
 }
 .episodes .episode-card__image {
   width: 270px;
@@ -1674,19 +1897,47 @@ button {
   object-fit: cover;
   border-radius: 8px;
 }
+@media (max-width: 575.98px) {
+  .episodes .episode-card__image {
+    width: 160px;
+    height: 170px;
+  }
+}
 .episodes .episode-card__info-top {
   padding: 30px 0 30px 30px;
 }
 .episodes .episode-card__info-bottom {
   padding: 30px 30px 30px 0;
 }
+@media (max-width: 575.98px) {
+  .episodes .episode-card__info-top {
+    padding: 19px 0 17px 17px;
+    height: 170px;
+    width: 179px;
+  }
+}
 .episodes .episode-card__meta {
   color: #fd6f1f;
   font-size: 1.4rem;
   line-height: 171.429%;
 }
+@media (max-width: 575.98px) {
+  .episodes .episode-card__meta {
+    font-size: 1rem;
+  }
+}
 .episodes .episode-card__title {
   margin-top: 6px;
+}
+@media (max-width: 575.98px) {
+  .episodes .episode-card__title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .episodes .episode-card__desc {
+    font-size: 1rem;
+  }
 }
 .episodes .episode-card__link {
   gap: 6px;
@@ -1698,6 +1949,11 @@ button {
   font-weight: 600;
   transition: color 0.4s ease;
 }
+@media (max-width: 575.98px) {
+  .episodes .episode-card__link--text {
+    font-size: 1rem;
+  }
+}
 .episodes .episode-card__link--icon {
   justify-content: center;
   width: 18px;
@@ -1705,6 +1961,12 @@ button {
   border-radius: 50%;
   background: #201830;
   transition: all 0.4s ease;
+}
+@media (max-width: 575.98px) {
+  .episodes .episode-card__link--icon {
+    width: 10px;
+    height: 10px;
+  }
 }
 .episodes .episode-card__link:hover .episode-card__link--text {
   color: #936cdd;

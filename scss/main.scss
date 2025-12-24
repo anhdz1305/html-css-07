@@ -23,7 +23,7 @@
             width: 12px;
             height: 12px;
             border-radius: 12px;
-            background: #936cdd;
+            background: var(--primary-color);
             @include abstracts.breakpoint(sm) {
                 width: 7px;
                 height: 7px;
@@ -43,8 +43,13 @@
         display: block;
     }
 }
+.sticky {
+    position: sticky;
+    top: -20px;
+    z-index: 9999;
+}
 .header {
-    background: #fff8f3;
+    background: var(--background-color);
     .header-navbar {
         @extend %dis-aline-flex;
         padding: 42px 0 20px;
@@ -74,7 +79,7 @@
             }
             &__list {
                 @extend %dis-aline-flex;
-                gap: 48px;
+
                 @include abstracts.breakpoint(lg) {
                     padding: 30px;
                     flex-direction: column;
@@ -99,9 +104,17 @@
             }
             &__link {
                 @extend %dis-aline-flex;
+                padding: 4px 20px;
+                transition: transform 0.4s ease;
+                &:hover {
+                    transform: translateY(-3px);
+                }
             }
             &__text {
                 @extend %text-desc;
+                &:hover {
+                    color: var(--primary-color);
+                }
             }
             &__icon {
                 margin-left: 7px;
@@ -172,13 +185,13 @@
                 padding: 20px;
                 transition: right 0.3s ease-in-out;
                 @include abstracts.breakpoint(lg) {
-                    inset: 0 0 0 30%;
-                }
-                @include abstracts.breakpoint(md) {
-                    inset: 0 0 0 30%;
+                    inset: 0 0 0 60%;
                 }
                 @include abstracts.breakpoint(md) {
                     inset: 0 0 0 50%;
+                }
+                @include abstracts.breakpoint(sm) {
+                    inset: 0 0 0 30%;
                 }
             }
             .mobi-nav {
@@ -217,7 +230,7 @@
 }
 .header-hero {
     padding: 90px 0 140px;
-    background: #fff8f3;
+    background: var(--background-color);
     @include abstracts.breakpoint(lg) {
         width: 100%;
     }
@@ -484,7 +497,7 @@
             margin-top: 40px;
             @extend %dis-aline-flex;
             &--btn {
-                background: #936cdd;
+                background: var(--primary-color);
             }
             &--secondary {
                 margin-left: 28px;
@@ -573,7 +586,7 @@
     }
     &__btn {
         margin-top: 38px;
-        background: #936cdd;
+        background: var(--primary-color);
         @extend %dis-aline-flex;
         justify-content: center;
         &--icon {
@@ -584,7 +597,7 @@
             height: 18px;
             border-radius: 50%;
             background: #fff;
-            color: #936cdd;
+            color: var(--primary-color);
         }
     }
     &__icon {
@@ -677,6 +690,9 @@
 }
 .category {
     padding: 0 0 160px;
+    @include abstracts.breakpoint(sm) {
+        padding: 0 0 100px;
+    }
     .category-section {
         &__header {
             position: relative;
@@ -718,17 +734,24 @@
             &--large {
                 width: 100%;
                 height: 600px;
+                overflow: hidden;
             }
             &--medium,
             &--small {
                 width: 100%;
                 height: 285px;
+                overflow: hidden;
             }
             &__img {
                 width: 100%;
                 height: 100%;
                 border-radius: 8px;
                 object-fit: cover;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
             &__content {
                 position: absolute;
@@ -765,7 +788,7 @@
 }
 .episodes {
     padding: 100px 0;
-    background: #fff8f3;
+    background: var(--background-color);
     .episodes-section {
         &__header {
             @extend %dis-aline-flex;
@@ -812,24 +835,6 @@
     }
     .episodes-grid {
         .row {
-            @include abstracts.breakpoint(md) {
-                > div:nth-child(2) {
-                    order: 3;
-                }
-                > div:nth-child(3) {
-                    order: 4;
-                }
-            }
-            @include abstracts.breakpoint(sm) {
-                display: flex;
-                flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
-                overflow-x: auto; /* Cho phép cuộn ngang */
-                scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
-                gap: 15px; /* Khoảng cách giữa các thẻ */
-                padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
-                -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
-                overflow: hidden;
-            }
             @include abstracts.breakpoint(lg) {
                 > div:nth-child(2) {
                     order: 3;
@@ -837,6 +842,24 @@
                 > div:nth-child(3) {
                     order: 4;
                 }
+            }
+            @include abstracts.breakpoint(xl) {
+                > div:nth-child(2) {
+                    order: 3;
+                }
+                > div:nth-child(3) {
+                    order: 4;
+                }
+            }
+
+            @include abstracts.breakpoint(sm) {
+                display: flex;
+                flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+                overflow-x: auto; /* Cho phép cuộn ngang */
+                scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+                padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+                -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+                overflow: hidden;
             }
         }
         &__btn {
@@ -854,33 +877,61 @@
     }
     .episode-card {
         margin-top: 84px;
-        width: 100%;
-        height: 286px;
         @include abstracts.breakpoint(sm) {
-            margin-top: 0;
+            margin-top: 38px;
         }
-        @extend %dis-aline-flex;
-        &__image {
-            width: 270px;
+        &--reverse {
+            .row {
+                > div:first-child {
+                    order: 2;
+                }
+                > div:last-child {
+                    order: 1;
+                }
+                @include abstracts.breakpoint(sm) {
+                    > div:first-child {
+                        order: 1;
+                    }
+                    > div:last-child {
+                        order: 2;
+                    }
+                }
+            }
+        }
+        &__img {
+            width: 100%;
             height: 286px;
-            object-fit: cover;
             border-radius: 8px;
+            overflow: hidden;
             @include abstracts.breakpoint(sm) {
-                width: 160px;
                 height: 170px;
             }
         }
-        &__info-top {
-            padding: 30px 0 30px 30px;
-        }
-        &__info-bottom {
-            padding: 30px 30px 30px 0;
-        }
-        &__info-top {
+        &__visual {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            :hover {
+                transform: scale(1.1);
+            }
             @include abstracts.breakpoint(sm) {
-                padding: 19px 0px 17px 17px;
                 height: 170px;
+            }
+            &--image {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+            }
+        }
+        &__info {
+            margin-top: 29px;
+            @include abstracts.breakpoint(sm) {
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
         }
         &__meta {
@@ -929,8 +980,10 @@
                 background: #201830;
                 transition: all 0.4s ease;
                 img {
-                    width: 4px;
-                    height: 4px;
+                    @include abstracts.breakpoint(sm) {
+                        width: 4px;
+                        height: 4px;
+                    }
                 }
                 @include abstracts.breakpoint(sm) {
                     width: 10px;
@@ -940,11 +993,11 @@
 
             &:hover {
                 .episode-card__link--text {
-                    color: #936cdd;
+                    color: var(--primary-color);
                 }
 
                 .episode-card__link--icon {
-                    background: #936cdd;
+                    background: var(--primary-color);
                     transform: translateX(3px);
                 }
             }
@@ -1167,7 +1220,7 @@
             }
         }
         .subscribe__btn {
-            background: #936cdd;
+            background: var(--primary-color);
             @include abstracts.breakpoint(md) {
                 display: block;
                 margin-right: auto;
@@ -1216,7 +1269,7 @@
             background: #201830;
             transition: background 0.4s ease;
             &:hover {
-                background: #936cdd;
+                background: var(--primary-color);
             }
         }
     }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>babble</title>
         <link rel="stylesheet" href="./assets/css/main.css" class="css" />
 
         <!-- font -->
@@ -35,11 +35,11 @@
     </head>
     <body>
         <main>
-            <header class="header">
+            <header class="header sticky">
                 <div class="container">
                     <div class="header-navbar">
                         <div class="logo-navbar">
-                            <img src="./assets/img/Logo.svg" alt="" />
+                            <img src="./assets/img/Logo.svg" alt="babble" />
                         </div>
                         <div id="pc-nav" class="navbar">
                             <ul class="navbar__list">
@@ -618,189 +618,261 @@
                         </header>
 
                         <div class="episodes-grid">
-                            <div
-                                class="row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 g-3"
-                            >
-                                <div class="col col-12">
+                            <div class="row">
+                                <div class="col col-xl-6 col-12">
                                     <article class="episode-card">
-                                        <div class="episode-card__visual">
-                                            <img
-                                                src="./assets/img/episodes-1.png"
-                                                alt="Episode thumbnail"
-                                                class="episode-card__image"
-                                            />
-                                        </div>
-                                        <div
-                                            class="episode-card__info episode-card__info-top"
-                                        >
-                                            <span class="episode-card__meta">
-                                                Episode 3 - 1hr 25min
-                                            </span>
-                                            <h3 class="episode-card__title">
-                                                Should you get outboard audio
-                                                gear?
-                                            </h3>
-                                            <p class="episode-card__desc">
-                                                Is hardware really worth it when
-                                                it comes to podcasting? The
-                                                answer is... it depends.
-                                            </p>
-                                            <a
-                                                href="#!"
-                                                class="episode-card__link"
-                                            >
-                                                <span
-                                                    class="episode-card__link--text"
-                                                >
-                                                    Listen now
-                                                </span>
-                                                <span
-                                                    class="episode-card__link--icon"
-                                                >
-                                                    <img
-                                                        src="./assets/icons/play.svg"
-                                                    />
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="col col-12">
-                                    <article
-                                        class="episode-card episode-card--reverse"
-                                    >
-                                        <div class="episode-card__visual">
-                                            <img
-                                                src="./assets/img/episodes-2.png"
-                                                alt="Episode thumbnail"
-                                                class="episode-card__image"
-                                            />
-                                        </div>
-                                        <div
-                                            class="episode-card__info episode-card__info-top"
-                                        >
-                                            <span class="episode-card__meta"
-                                                >Episode 3 - 1hr 25min</span
-                                            >
-                                            <h3 class="episode-card__title">
-                                                Should you get outboard audio
-                                                gear?
-                                            </h3>
-                                            <p class="episode-card__desc">
-                                                Is hardware really worth it when
-                                                it comes to podcasting? The
-                                                answer is... it depends.
-                                            </p>
-                                            <a
-                                                href="#!"
-                                                class="episode-card__link"
-                                            >
-                                                <span
-                                                    class="episode-card__link--text"
-                                                >
-                                                    Listen now
-                                                </span>
-                                                <span
-                                                    class="episode-card__link--icon"
-                                                >
-                                                    <img
-                                                        src="./assets/icons/play.svg"
-                                                    />
-                                                </span>
-                                            </a>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="episode-card__img">
+                                                    <a
+                                                        href="#!"
+                                                        class="episode-card__visual"
+                                                    >
+                                                        <img
+                                                            src="./assets/img/episodes-1.png"
+                                                            alt="Episode thumbnail"
+                                                            class="episode-card__visual--image"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="episode-card__info">
+                                                    <span
+                                                        class="episode-card__meta"
+                                                    >
+                                                        Episode 3 - 1hr 25min
+                                                    </span>
+                                                    <h3
+                                                        class="episode-card__title"
+                                                    >
+                                                        Should you get outboard
+                                                        audio gear?
+                                                    </h3>
+                                                    <p
+                                                        class="episode-card__desc"
+                                                    >
+                                                        Is hardware really worth
+                                                        it when it comes to
+                                                        podcasting? The answer
+                                                        is... it depends.
+                                                    </p>
+                                                    <a
+                                                        href="#!"
+                                                        class="episode-card__link"
+                                                    >
+                                                        <span
+                                                            class="episode-card__link--text"
+                                                        >
+                                                            Listen now
+                                                        </span>
+                                                        <span
+                                                            class="episode-card__link--icon"
+                                                        >
+                                                            <img
+                                                                src="./assets/icons/play.svg"
+                                                            />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </article>
                                 </div>
 
-                                <div class="col col-12">
+                                <div class="col col-xl-6 col-12">
                                     <article class="episode-card">
-                                        <div
-                                            class="episode-card__info episode-card__info-bottom"
-                                        >
-                                            <span class="episode-card__meta"
-                                                >Episode 3 - 1hr 25min</span
-                                            >
-                                            <h3 class="episode-card__title">
-                                                Should you get outboard audio
-                                                gear?
-                                            </h3>
-                                            <p class="episode-card__desc">
-                                                Is hardware really worth it when
-                                                it comes to podcasting? The
-                                                answer is... it depends.
-                                            </p>
-                                            <a
-                                                href="#!"
-                                                class="episode-card__link"
-                                            >
-                                                <span
-                                                    class="episode-card__link--text"
-                                                >
-                                                    Listen now
-                                                </span>
-                                                <span
-                                                    class="episode-card__link--icon"
-                                                >
-                                                    <img
-                                                        src="./assets/icons/play.svg"
-                                                    />
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="episode-card__visual">
-                                            <img
-                                                src="./assets/img/episodes-3.png"
-                                                alt="Episode thumbnail"
-                                                class="episode-card__image"
-                                            />
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="episode-card__img">
+                                                    <a
+                                                        href="#!"
+                                                        class="episode-card__visual"
+                                                    >
+                                                        <img
+                                                            src="./assets/img/episodes-2.png"
+                                                            alt="Episode thumbnail"
+                                                            class="episode-card__visual--image"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="episode-card__info">
+                                                    <span
+                                                        class="episode-card__meta"
+                                                        >Episode 3 - 1hr
+                                                        25min</span
+                                                    >
+                                                    <h3
+                                                        class="episode-card__title"
+                                                    >
+                                                        Should you get outboard
+                                                        audio gear?
+                                                    </h3>
+                                                    <p
+                                                        class="episode-card__desc"
+                                                    >
+                                                        Is hardware really worth
+                                                        it when it comes to
+                                                        podcasting? The answer
+                                                        is... it depends.
+                                                    </p>
+                                                    <a
+                                                        href="#!"
+                                                        class="episode-card__link"
+                                                    >
+                                                        <span
+                                                            class="episode-card__link--text"
+                                                        >
+                                                            Listen now
+                                                        </span>
+                                                        <span
+                                                            class="episode-card__link--icon"
+                                                        >
+                                                            <img
+                                                                src="./assets/icons/play.svg"
+                                                            />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </article>
                                 </div>
 
-                                <div class="col col-12">
-                                    <article
-                                        class="episode-card episode-card--reverse"
-                                    >
-                                        <div
-                                            class="episode-card__info episode-card__info-bottom"
-                                        >
-                                            <span class="episode-card__meta"
-                                                >Episode 3 - 1hr 25min</span
-                                            >
-                                            <h3 class="episode-card__title">
-                                                Should you get outboard audio
-                                                gear?
-                                            </h3>
-                                            <p class="episode-card__desc">
-                                                Is hardware really worth it when
-                                                it comes to podcasting? The
-                                                answer is... it depends.
-                                            </p>
-                                            <a
-                                                href="#!"
-                                                class="episode-card__link"
-                                            >
-                                                <span
-                                                    class="episode-card__link--text"
-                                                >
-                                                    Listen now
-                                                </span>
-                                                <span
-                                                    class="episode-card__link--icon"
-                                                >
-                                                    <img
-                                                        src="./assets/icons/play.svg"
-                                                    />
-                                                </span>
-                                            </a>
+                                <div class="col col-xl-6 col-12">
+                                    <article class="episode-card">
+                                        <div class="episode-card--reverse">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div
+                                                        class="episode-card__img"
+                                                    >
+                                                        <a
+                                                            href="#!"
+                                                            class="episode-card__visual"
+                                                        >
+                                                            <img
+                                                                src="./assets/img/episodes-3.png"
+                                                                alt="Episode thumbnail"
+                                                                class="episode-card__visual--image"
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div
+                                                        class="episode-card__info"
+                                                    >
+                                                        <span
+                                                            class="episode-card__meta"
+                                                            >Episode 3 - 1hr
+                                                            25min</span
+                                                        >
+                                                        <h3
+                                                            class="episode-card__title"
+                                                        >
+                                                            Should you get
+                                                            outboard audio gear?
+                                                        </h3>
+                                                        <p
+                                                            class="episode-card__desc"
+                                                        >
+                                                            Is hardware really
+                                                            worth it when it
+                                                            comes to podcasting?
+                                                            The answer is... it
+                                                            depends.
+                                                        </p>
+                                                        <a
+                                                            href="#!"
+                                                            class="episode-card__link"
+                                                        >
+                                                            <span
+                                                                class="episode-card__link--text"
+                                                            >
+                                                                Listen now
+                                                            </span>
+                                                            <span
+                                                                class="episode-card__link--icon"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/play.svg"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="episode-card__visual">
-                                            <img
-                                                src="./assets/img/episodes-4.png"
-                                                alt="Episode thumbnail"
-                                                class="episode-card__image"
-                                            />
+                                    </article>
+                                </div>
+
+                                <div class="col col-xl-6 col-12">
+                                    <article class="episode-card">
+                                        <div class="episode-card--reverse">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div
+                                                        class="episode-card__img"
+                                                    >
+                                                        <a
+                                                            href="#!"
+                                                            class="episode-card__visual"
+                                                        >
+                                                            <img
+                                                                src="./assets/img/episodes-4.png"
+                                                                alt="Episode thumbnail"
+                                                                class="episode-card__visual--image"
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div
+                                                        class="episode-card__info"
+                                                    >
+                                                        <span
+                                                            class="episode-card__meta"
+                                                            >Episode 3 - 1hr
+                                                            25min</span
+                                                        >
+                                                        <h3
+                                                            class="episode-card__title"
+                                                        >
+                                                            Should you get
+                                                            outboard audio gear?
+                                                        </h3>
+                                                        <p
+                                                            class="episode-card__desc"
+                                                        >
+                                                            Is hardware really
+                                                            worth it when it
+                                                            comes to podcasting?
+                                                            The answer is... it
+                                                            depends.
+                                                        </p>
+                                                        <a
+                                                            href="#!"
+                                                            class="episode-card__link"
+                                                        >
+                                                            <span
+                                                                class="episode-card__link--text"
+                                                            >
+                                                                Listen now
+                                                            </span>
+                                                            <span
+                                                                class="episode-card__link--icon"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/play.svg"
+                                                                />
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </article>
                                 </div>
@@ -812,7 +884,7 @@
                             <span class="dot"></span>
                             <span class="dot"></span>
                         </div>
-                        <button class="btn episodes-grid__btn">
+                        <button class="btn episodes-grid__btn hidden-mobile">
                             All episodes
                         </button>
                     </section>

@@ -41,7 +41,7 @@
                         <div class="logo-navbar">
                             <img src="./assets/img/Logo.svg" alt="" />
                         </div>
-                        <div class="navbar">
+                        <div id="pc-nav" class="navbar">
                             <ul class="navbar__list">
                                 <li class="navbar__item">
                                     <a href="#!" class="navbar__link">
@@ -74,15 +74,82 @@
                                         <span class="navbar__text"> Blog </span>
                                     </a>
                                 </li>
+                                <li class="navbar__item hidden-mobile">
+                                    <a href="#!" class="navbar__link">
+                                        <span class="navbar__text">
+                                            Log in
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="navbar__item hidden-mobile">
+                                    <a href="#!" class="navbar__link">
+                                        <span class="navbar__text">
+                                            Sign up
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="header__actions">
                             <a href="#!" class="header__login">Log in</a>
                             <button class="header__signup btn">Sign up</button>
                         </div>
+                        <div class="menu-mobile hidden-mobile">
+                            <div class="menu-mobile">
+                                <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    id="menu-checkbox"
+                                    class="menu-hidden"
+                                />
+                                <label for="menu-checkbox" class="menu-overlay">
+                                    <svg
+                                        width="18"
+                                        height="16"
+                                        viewBox="0 0 18 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <rect
+                                            width="18"
+                                            height="2"
+                                            fill="#61594F"
+                                        />
+                                        <rect
+                                            y="7"
+                                            width="18"
+                                            height="2"
+                                            fill="#61594F"
+                                        />
+                                        <rect
+                                            y="14"
+                                            width="18"
+                                            height="2"
+                                            fill="#61594F"
+                                        />
+                                    </svg>
+                                </label>
+                                <label
+                                    for="menu-checkbox"
+                                    class="menu-screen-overlay"
+                                ></label>
+                                <div class="menu-drawer">
+                                    <ul id="mobi-nav"></ul>
+                                    <script>
+                                        const pcNav =
+                                            document.querySelector("#pc-nav");
+                                        const mobiNav =
+                                            document.querySelector("#mobi-nav");
+
+                                        mobiNav.innerHTML = pcNav.innerHTML;
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
+
             <div class="header-hero">
                 <div class="container">
                     <section class="hero-container">
@@ -554,7 +621,7 @@
                             <div
                                 class="row row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 g-3"
                             >
-                                <div class="col">
+                                <div class="col col-12">
                                     <article class="episode-card">
                                         <div class="episode-card__visual">
                                             <img
@@ -599,7 +666,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col">
+                                <div class="col col-12">
                                     <article
                                         class="episode-card episode-card--reverse"
                                     >
@@ -646,7 +713,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col">
+                                <div class="col col-12">
                                     <article class="episode-card">
                                         <div
                                             class="episode-card__info episode-card__info-bottom"
@@ -691,7 +758,7 @@
                                     </article>
                                 </div>
 
-                                <div class="col">
+                                <div class="col col-12">
                                     <article
                                         class="episode-card episode-card--reverse"
                                     >
@@ -755,7 +822,9 @@
                 <div class="container">
                     <section class="testimonial-section">
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12"
+                            >
                                 <div class="testimonial__img">
                                     <div class="testimonial__img--primary">
                                         <img
@@ -783,7 +852,7 @@
                             </div>
 
                             <div
-                                class="offset-xl-1 col-xl-5 offset-lg-1 col-lg-5 col-md-12 col-sm-12"
+                                class="offset-xl-1 col-xl-5 offset-lg-1 col-lg-5 col-md-12 col-sm-12 col-12"
                             >
                                 <div class="testimonial__content">
                                     <div class="testimonial__content--icon">
@@ -797,8 +866,7 @@
                                         <h2
                                             class="testimonial__content--title-text"
                                         >
-                                            What our listeners <br />saying
-                                            about us
+                                            What our listeners saying about us
                                         </h2>
                                         <img
                                             src="./assets/img/testimonial-decor.svg"

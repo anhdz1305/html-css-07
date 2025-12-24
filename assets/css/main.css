@@ -1102,7 +1102,7 @@ button {
   cursor: pointer;
 }
 
-.pagination, .header .header-navbar, .header .header-navbar .navbar__list, .header .header-navbar .navbar__link, .header .header-navbar .header__actions, .header .header-navbar .menu-mobile .menu-overlay, .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-text, .header-hero .hero-container .hero__media__collum-right .hero__platforms, .header-hero .hero-container .hero__media__collum-right .hero__badge, .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author, .header-hero .hero__content .hero__action, .header-hero .hero__content .hero__action--secondary, .header-hero .hero__content .hero__action--icon, .directories__btn, .directories__btn--icon, .episodes .episodes-section__header, .episodes .episode-card__link, .episodes .episode-card__link--icon, .subscribe__header, .subscribe__form, .footer__social, .footer__social--link, .footer__platform--list {
+.pagination, .header .header-navbar, .header .header-navbar .navbar__list, .header .header-navbar .navbar__link, .header .header-navbar .header__actions, .header .header-navbar .menu-mobile .menu-overlay, .header-hero .hero-container .hero__media__collum-left .hero__stats--avatar-text, .header-hero .hero-container .hero__media__collum-right .hero__platforms, .header-hero .hero-container .hero__media__collum-right .hero__badge, .header-hero .hero-container .hero__media__collum-right .hero__card--host .hero__author, .header-hero .hero__content .hero__action, .header-hero .hero__content .hero__action--secondary, .header-hero .hero__content .hero__action--icon, .directories__btn, .directories__btn--icon, .category .category-grid .category-card__title, .episodes .episodes-section__header, .episodes .episode-card__link, .episodes .episode-card__link--icon, .subscribe__header, .subscribe__form, .footer__social, .footer__social--link, .footer__platform--list {
   display: flex;
   align-items: center;
 }
@@ -1147,9 +1147,10 @@ button {
   height: 64px;
   border-radius: 8px;
   background: #201830;
+  transition: background 0.4s ease;
 }
 .btn:hover {
-  opacity: 0.8;
+  background: var(--primary-color);
 }
 
 :root {
@@ -1303,6 +1304,9 @@ button {
 }
 .header .header-navbar .header__actions .header__login {
   color: #201830;
+}
+.header .header-navbar .header__actions .header__login:hover {
+  color: var(--primary-color);
 }
 .header .header-navbar .header__actions .header__signup {
   min-width: 116px !important;
@@ -1708,9 +1712,20 @@ button {
 }
 .header-hero .hero__content .hero__action--btn {
   background: var(--primary-color);
+  transition: background 0.4s ease;
+}
+.header-hero .hero__content .hero__action--btn:hover {
+  background: #7a51c7;
 }
 .header-hero .hero__content .hero__action--secondary {
   margin-left: 28px;
+}
+.header-hero .hero__content .hero__action--secondary:hover .hero__action--link {
+  color: var(--primary-color);
+}
+.header-hero .hero__content .hero__action--secondary:hover .hero__action--icon {
+  transform: translateX(5px);
+  background: var(--primary-color);
 }
 .header-hero .hero__content .hero__action--link {
   color: #201830;
@@ -1718,6 +1733,7 @@ button {
   font-style: normal;
   font-weight: 600;
   line-height: 3rem; /* 166.667% */
+  transition: color 0.4s ease;
 }
 .header-hero .hero__content .hero__action--icon {
   justify-content: center;
@@ -1726,6 +1742,7 @@ button {
   height: 18px;
   border-radius: 50%;
   background: #201830;
+  transition: all 0.4s ease;
 }
 
 .directories {
@@ -1798,6 +1815,13 @@ button {
   margin-top: 38px;
   background: var(--primary-color);
   justify-content: center;
+  transition: background 0.4s ease;
+}
+.directories__btn:hover {
+  background: #7a51c7;
+}
+.directories__btn:hover .directories__btn--icon {
+  transform: translateX(6px);
 }
 .directories__btn--icon {
   justify-content: center;
@@ -1807,6 +1831,7 @@ button {
   border-radius: 50%;
   background: #fff;
   color: var(--primary-color);
+  transition: transform 0.4s ease-in-out;
 }
 .directories__icon {
   position: relative;
@@ -1988,13 +2013,22 @@ button {
   fill: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
-.category .category-grid .category-card__name {
+.category .category-grid .category-card__title {
   margin-top: 16px;
   margin-left: 24px;
+  gap: 8px;
+}
+.category .category-grid .category-card__title:hover .icon-arrow {
+  transform: translate(10px);
+}
+.category .category-grid .category-card__name {
   color: #fff;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 166.667%;
+}
+.category .category-grid .category-card .icon-arrow {
+  transition: transform 0.4s ease;
 }
 .category .category-grid .category-card__count {
   margin-left: 24px;
@@ -2479,6 +2513,10 @@ button {
 }
 .subscribe__form .subscribe__btn {
   background: var(--primary-color);
+  transition: background 0.4s ease;
+}
+.subscribe__form .subscribe__btn:hover {
+  background: #7a51c7;
 }
 @media (max-width: 767.98px) {
   .subscribe__form .subscribe__btn {
@@ -2555,6 +2593,12 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.footer__left--item :hover {
+  text-shadow: 0.5px 0 0 #212832;
+}
+.footer__left--link {
+  transition: text-shadow 0.4s ease;
 }
 .footer__platform--list {
   margin-top: 24px;

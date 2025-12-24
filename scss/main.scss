@@ -129,6 +129,9 @@
             .header__login {
                 color: #201830;
                 @extend %text-btn;
+                &:hover {
+                    color: var(--primary-color);
+                }
             }
             .header__signup {
                 min-width: 116px !important;
@@ -498,18 +501,29 @@
             @extend %dis-aline-flex;
             &--btn {
                 background: var(--primary-color);
+                transition: background 0.4s ease;
+                &:hover {
+                    background: #7a51c7;
+                }
             }
             &--secondary {
                 margin-left: 28px;
                 @extend %dis-aline-flex;
+                &:hover .hero__action--link {
+                    color: var(--primary-color);
+                }
+                &:hover .hero__action--icon {
+                    transform: translateX(5px);
+                    background: var(--primary-color);
+                }
             }
             &--link {
                 color: #201830;
-
                 font-size: 1.8rem;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 3rem; /* 166.667% */
+                transition: color 0.4s ease;
             }
             &--icon {
                 @extend %dis-aline-flex;
@@ -519,6 +533,7 @@
                 height: 18px;
                 border-radius: 50%;
                 background: #201830;
+                transition: all 0.4s ease;
             }
         }
     }
@@ -589,6 +604,14 @@
         background: var(--primary-color);
         @extend %dis-aline-flex;
         justify-content: center;
+        transition: background 0.4s ease;
+        &:hover {
+            background: #7a51c7;
+        }
+        &:hover .directories__btn--icon {
+            transform: translateX(6px);
+        }
+
         &--icon {
             @extend %dis-aline-flex;
             justify-content: center;
@@ -598,6 +621,7 @@
             border-radius: 50%;
             background: #fff;
             color: var(--primary-color);
+            transition: transform 0.4s ease-in-out;
         }
     }
     &__icon {
@@ -763,14 +787,25 @@
                 fill: rgba(255, 255, 255, 0.2);
                 backdrop-filter: blur(10px);
             }
-            &__name {
+            &__title {
                 margin-top: 16px;
                 margin-left: 24px;
+                @extend %dis-aline-flex;
+                gap: 8px;
+                &:hover .icon-arrow {
+                    transform: translate(10px);
+                }
+            }
+            &__name {
                 color: #fff;
                 font-size: 1.8rem;
                 font-weight: 600;
                 line-height: 166.667%;
             }
+            .icon-arrow {
+                transition: transform 0.4s ease;
+            }
+
             &__count {
                 margin-left: 24px;
                 color: #fff;
@@ -1221,6 +1256,10 @@
         }
         .subscribe__btn {
             background: var(--primary-color);
+            transition: background 0.4s ease;
+            &:hover {
+                background: #7a51c7;
+            }
             @include abstracts.breakpoint(md) {
                 display: block;
                 margin-right: auto;
@@ -1295,8 +1334,14 @@
             flex-direction: column;
             gap: 16px;
         }
+        &--item {
+            :hover {
+                text-shadow: 0.5px 0 0 #212832;
+            }
+        }
         &--link {
             @extend %text-desc;
+            transition: text-shadow 0.4s ease;
         }
     }
     &__platform {
